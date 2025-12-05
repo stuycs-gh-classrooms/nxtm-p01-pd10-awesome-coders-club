@@ -1,7 +1,6 @@
 # NeXtCS Project 01
 ### Period:  10
 ### Name0: Andrzej Olszak
-### Name1: TEAMMATE NAME HERE (delete if working solo)
 #### Selected Game: Breakout/Arkanoid
 ---
 
