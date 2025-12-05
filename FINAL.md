@@ -1,6 +1,7 @@
 # NeXtCS Project 01
 ### Period:  10
 ### Name0: Andrzej Olszak
+### Name 1: Rice Yuan
 #### Selected Game: Breakout/Arkanoid
 ---
 
