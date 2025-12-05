@@ -31,16 +31,20 @@ What are the core features that your program should have? These should be things
     - bounces off edges except bottom edge
     - interacts with blocks(breaks them)
     - interacts with paddle (bounces off)
+
 > paddle
     - moves with mouse
     - interacts with ball
+
 > blocks
     - interacts with ball(disappears)
     - !! arrays(of blocks)
+
 > lives
     - three
     - lives lost for ball touching bottom edge
     - 0 = lose
+
 > game settings
     - pause
     - unpause
@@ -54,16 +58,21 @@ What are some features that are not essential to the program, but you would like
 > ball
     - vectors(different directions)
     - ball skins
+
 > paddle
     - paddle skins
+
 > blocks
     - block skins
     - moving blocks
+
 > game settings
     - difficulty changes
     - score(count)
+
 > background
     - background skins
+
 > powerups
     - multi-balls
     - bigger balls
