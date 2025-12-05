@@ -1,6 +1,7 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Mfyqb_T6)
 # NeXtCS Project 01
-### thinker0: FRIST LSAT
-### thinker1: FRIST LSAT
+### thinker0: Andrzej Olszak
+### thinker1: Rice Yuan
 ---
 
 ### Overview
@@ -21,18 +22,60 @@ The first phase will be to work on this document.
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: Breakout/Arkanoid
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+> ball
+    - bounces off edges except bottom edge
+    - interacts with blocks(breaks them)
+    - interacts with paddle (bounces off)
+
+> paddle
+    - moves with mouse
+    - interacts with ball
+
+> blocks
+    - interacts with ball(disappears)
+    - !! arrays(of blocks)
+
+> lives
+    - three
+    - lives lost for ball touching bottom edge
+    - 0 = lose
+
+> game settings
+    - pause
+    - unpause
+    - reset
+    - win condition: all blocks gone
+
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+> ball
+    - vectors(different directions)
+    - ball skins
 
+> paddle
+    - paddle skins
+
+> blocks
+    - block skins
+    - moving blocks
+
+> game settings
+    - difficulty changes
+    - score(count)
+
+> background
+    - background skins
+
+> powerups
+    - multi-balls
+    - bigger balls
 ### Array Usage
 How will you be using arrays in this project?
 
@@ -40,7 +83,7 @@ How will you be using arrays in this project?
 - YOUR ANSER HERE
 
 2D Array:
-- YOUR ANSWER HERE
+- blocks!! (grid)
 
 
 ### Controls

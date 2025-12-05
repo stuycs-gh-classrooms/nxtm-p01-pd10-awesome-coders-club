@@ -1,8 +1,8 @@
 # NeXtCS Project 01
-### Period:  
-### Name0: YOUR NAME HERE
-### Name1: TEAMMATE NAME HERE (delete if working solo)
-#### Selected Game: YOUR GAME HERE
+### Period:  10
+### Name0: Andrzej Olszak
+### Name 1: Rice Yuan
+#### Selected Game: Breakout/Arkanoid
 ---
 
 ### How To Play
