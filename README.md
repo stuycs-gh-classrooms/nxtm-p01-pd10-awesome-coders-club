@@ -80,7 +80,7 @@ What are some features that are not essential to the program, but you would like
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+- balls
 
 2D Array:
 - blocks!! (grid)
@@ -90,24 +90,45 @@ How will you be using arrays in this project?
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- p to pause/unpause
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: x position of the mouse controls the paddle
+- Mouse pressed: starts the game and launches the ball when you lose a life
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+CLASS Ball
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - PVector position
+  - int xspeed
+  - int yspeed
 - METHODS
-  - LIST METHODS HERE
+  - Ball(int x)
+  - Ball()
+  - display()
+  - move()
 
-CLASS NAME1
+CLASS Paddle
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int x
 - METHODS
-  - LIST METHODS HERE
+  - Paddle()
+  - display()
+  
+  CLASS Grid
+- Instance variables:
+  - Block[][]
+- METHODS
+  - Grid()
+ 
+  CLASS Block
+- Instance variables:
+  - PVector position
+  - boolean on
+- METHODS
+  - Block(int x,int y)
+  - Block()
+  - display()
