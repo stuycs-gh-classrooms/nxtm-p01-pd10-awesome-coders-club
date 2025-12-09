@@ -13,4 +13,6 @@ void setup() {
 void draw() {
    background(0);
   paddle.display();
+  balls[0].display();
+  balls[0].move();
 }
