@@ -1,13 +1,18 @@
 class Paddle
 {
-  int x;
+  // variables
+  int x; // x-coord of the paddle
   
   Paddle() {
     x = mouseX-30;
   }
   void display() {
-    x = mouseX-30;
-    fill(255);
+
+    x = mouseX-30; 
+    // paddle moves with mouse
+    fill(255); // paddle color
     rect(x,430,60,5);
+    // y does not change, only x
+
   }
-}
+} //paddle class
