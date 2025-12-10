@@ -1,19 +1,20 @@
 class Grid
 {
-  Block[][] grid;
-  int numRows;
-  int numCols;
+  Block[][] grid; // grid for blocks (grid inside of a grid)
+  // variables 
+  int numRows; 
+  int numCols; 
   
   Grid(int x, int y) {
     numRows = x;
     numCols = y;
     grid = new Block[y][x];
     populate();
-  }
+  } //grid constructor 
   
   Grid() {
     this(10,5);
-  }
+  } // overload (for default constructor)
   
   
   void populate() {
@@ -23,6 +24,7 @@ class Grid
         println(grid[i][j].position);
       }
     }
+<<<<<<< HEAD
   }
   void display() {
     for(int i = 0;i<numCols;i++) {
@@ -34,3 +36,7 @@ class Grid
     }
   }
 }
+=======
+  } // to add to grid
+} // grid
+>>>>>>> be7cfe4cfdd16e24c4472c18e9acd853d91e6c50
