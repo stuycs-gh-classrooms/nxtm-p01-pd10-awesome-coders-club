@@ -3,11 +3,13 @@ Grid grid;
 Paddle paddle;
 boolean playing;
 int lives;
+boolean chaos;
 
 void setup() {
   lives = 3;
+  chaos=false;
   playing = true;
-  size(500,500);
+  size(510,500);
   balls = new Ball[5];
   grid = new Grid();
   paddle = new Paddle();
@@ -28,6 +30,7 @@ void draw() {
   if(lives==0) {
     trueReset();
   }
+  grid.display();
 }
 
 void mouseClicked() {
@@ -40,6 +43,9 @@ void keyPressed() {
   }
   if(key=='r') {
     trueReset();
+  }
+  if(key=='t') {
+    chaos=!chaos;
   }
 }
 

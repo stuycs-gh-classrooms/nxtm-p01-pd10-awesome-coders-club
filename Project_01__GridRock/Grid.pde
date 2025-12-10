@@ -19,8 +19,17 @@ class Grid
   void populate() {
     for(int i = 0;i<numCols;i++) {
       for(int j = 0;j<numRows;j++) {
-        grid[i][j] = new Block(new PVector(50*j+width/2-50*2,(50/2)+50*i));
+        grid[i][j] = new Block(new PVector(50*j+10,50*i+10));
         println(grid[i][j].position);
+      }
+    }
+  }
+  void display() {
+    for(int i = 0;i<numCols;i++) {
+      for(int j = 0;j<numRows;j++) {
+        if(grid[i][j].on) {
+          grid[i][j].display();
+        }
       }
     }
   }
