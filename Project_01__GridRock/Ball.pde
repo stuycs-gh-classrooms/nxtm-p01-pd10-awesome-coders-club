@@ -12,8 +12,8 @@ class Ball
     position = new PVector();
     position.x = mouseX;
     position.y = 420;
-    xspeed = 1;
-    yspeed = -1;
+    xspeed = 10;
+    yspeed = -10;
     bsize = 24;
   }
   
@@ -29,15 +29,18 @@ class Ball
   void move() {
     if(position.x-bsize/2<0 || position.x+bsize/2>width) {
       xspeed*=-1;
+      xspeed+=int(random(-5,5));
     }
     if(position.y-bsize/2<0) {
       yspeed*=-1;
+      yspeed+=int(random(-5,5));
     }
     if(position.y+bsize/2>435 &&
     position.y+bsize/2<445 &&
     position.x+bsize>mouseX-30 &&
     position.x-bsize<mouseX+30) {
       yspeed*=-1;
+      yspeed+=int(random(-5,5));
     }
     if(onPaddle) {
       position.x = mouseX;

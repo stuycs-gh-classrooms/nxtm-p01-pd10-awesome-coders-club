@@ -25,6 +25,9 @@ void draw() {
   balls[0].move();
   text("lives: "+lives,10,10);
   }
+  if(lives==0) {
+    trueReset();
+  }
 }
 
 void mouseClicked() {
