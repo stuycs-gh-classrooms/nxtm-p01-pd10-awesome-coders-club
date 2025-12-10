@@ -4,8 +4,9 @@ class Block
   PVector position;
   boolean on;
   
-  Block(int x,int y) {
-    
+  Block(PVector place) {
+    on = true;
+    position = new PVector(place.x, place.y);
   }
   
   Block() {
@@ -13,6 +14,7 @@ class Block
   }
   
   void display() {
-    
+    fill(255);
+    rect(position.x,position.y,50,50);
   }
 }
