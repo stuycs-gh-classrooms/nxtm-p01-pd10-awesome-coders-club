@@ -52,17 +52,3 @@ void trueReset() {
   lives = 3;
 }
 
-
-/* known bugs:
-if you move the paddle over the ball as it's falling past it will get stuck until
-you move the paddle away
-  -if I decrease the interval for paddle bounce detection, it will go through the 
-      paddle at higher speeds, but the larger the interval the easier it is to
-      activate
-  -borderline impossible to activate at 5 and higher speed though
-  -tried solving, put off for now
-not really a bug but the ball starts moving left at the start of the game
-if the xspeed is positive and right if it's negative...
-no freaking clue what causes this...
-ok even weirder if you make a new ball it goes normal...
-*/
