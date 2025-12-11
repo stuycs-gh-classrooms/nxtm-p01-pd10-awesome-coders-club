@@ -14,7 +14,7 @@ void setup() {
   grid = new Grid();
   paddle = new Paddle();
   balls[0] = new Ball();
-  textAlign(LEFT,TOP);
+  textAlign(LEFT);
   stroke(255);
   textSize(20);
 }
@@ -25,7 +25,7 @@ void draw() {
   paddle.display();
   balls[0].display();
   balls[0].move();
-  text("lives: "+lives,10,10);
+  text("lives: "+lives,10,height-10);
   }
   if(lives==0) {
     trueReset();
@@ -55,6 +55,7 @@ void reset() {
 
 void trueReset() {
   balls[0] = new Ball();
+  grid = new Grid();
   lives = 3;
+  chaos = false;
 }
-

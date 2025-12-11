@@ -24,8 +24,9 @@ class Grid
         println(grid[i][j].position);
       }
     }
-<<<<<<< HEAD
   }
+
+  
   void display() {
     for(int i = 0;i<numCols;i++) {
       for(int j = 0;j<numRows;j++) {
@@ -35,8 +36,7 @@ class Grid
       }
     }
   }
-}
-=======
+
+//=======
   } // to add to grid
-} // grid
->>>>>>> be7cfe4cfdd16e24c4472c18e9acd853d91e6c50
+ // grid

@@ -12,8 +12,8 @@ class Ball
     position = new PVector();
     position.x = mouseX;
     position.y = 420;
-    xspeed = 10;
-    yspeed = -10;
+    xspeed = 2;
+    yspeed = -2;
     bsize = 24;
   }
   
@@ -27,6 +27,33 @@ class Ball
   }
   
   void move() {
+    for(int i = 0;i<grid.numCols;i++) {
+      for(int j = 0;j<grid.numRows;j++) {
+        if(inContactX(position,grid.grid[i][j].position) &&
+        inContactY(position,grid.grid[i][j].position)) {
+          if(grid.grid[i][j].on) {
+            grid.grid[i][j].on = false;
+          if(position.x<grid.grid[i][j].position.x ||
+          position.x>grid.grid[i][j].position.x+40) {
+          xspeed*=-1;
+          if(chaos) {
+      xspeed+=int(random(-5,5));
+      yspeed+=int(random(-5,5));
+      }
+          }
+          if(position.y<grid.grid[i][j].position.y ||
+          position.y>grid.grid[i][j].position.y+40) {
+            yspeed*=-1;
+            if(chaos) {
+      xspeed+=int(random(-5,5));
+      yspeed+=int(random(-5,5));
+      }
+          }
+          }
+        }
+      }
+    }
+    
     if(position.x-bsize/2<0 || position.x+bsize/2>width) {
       xspeed*=-1;
       if(chaos) {
@@ -63,13 +90,19 @@ class Ball
       lives-=1;
     }
   }
-  boolean inContact(PVector ballP, PVector blockP) {
-    if(ballP.x-blockP.x > (-1*bsize/2) &&
-    ballP.x-blockP.x < bsize/2 &&
-    ballP.y-blockP.y > (-1*bsize/2) &&
-    ballP.y-blockP.y < bsize/2) {
+  boolean inContactY(PVector ballP, PVector blockP) {
+    if(ballP.y-blockP.y > (-1*bsize/2) &&
+    ballP.y-(blockP.y+40) < bsize/2) {
       return true;
     }
    return false;
   }
+  
+  boolean inContactX(PVector ballP, PVector blockP) {
+    if(ballP.x-(blockP.x+40) < bsize/2 &&
+    ballP.x-blockP.x > (-1*bsize/2)) {
+    return true;
+  }
+  return false;
+}
 }
