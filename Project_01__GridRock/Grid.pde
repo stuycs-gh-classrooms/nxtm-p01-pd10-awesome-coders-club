@@ -21,7 +21,7 @@ class Grid
     for(int i = 0;i<numCols;i++) {
       for(int j = 0;j<numRows;j++) {
         grid[i][j] = new Block(new PVector(50*j+10,50*i+10));
-        println(grid[i][j].position);
+       // println(grid[i][j].position);
       }
     }
   }
@@ -35,6 +35,17 @@ class Grid
         }
       }
     }
+  }
+  
+  boolean empty() {
+    for(int i = 0;i<numCols;i++) {
+      for(int j = 0;j<numRows;j++) {
+        if(grid[i][j].on) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 
 //=======

@@ -31,6 +31,12 @@ void draw() {
     trueReset();
   }
   grid.display();
+  if(grid.empty()) {
+    playing = false;
+    textSize(50);
+    text("YOU WIN!",155,200);
+    textSize(20);
+  }
 }
 
 void mouseClicked() {
@@ -47,6 +53,21 @@ void keyPressed() {
   if(key=='t') {
     chaos=!chaos;
   }
+  if(key=='q') {
+    balls[0].xspeed*=1.5;
+    balls[0].yspeed*=1.5;
+  }
+  if(key=='e') {
+    balls[0].xspeed*=0.75;
+    balls[0].xspeed*=0.5;
+  }
+  if(key=='g') {
+    for(int i = 0;i<grid.numCols;i++) {
+      for(int j = 0;j<grid.numRows;j++) {
+        grid.grid[i][j].on = false;
+      }
+    }
+  }
 }
 
 void reset() {
@@ -54,8 +75,11 @@ void reset() {
 }
 
 void trueReset() {
+  playing = true;
   balls[0] = new Ball();
   grid = new Grid();
   lives = 3;
   chaos = false;
+  balls[0].xspeed = 5;
+  balls[0].yspeed = -5;
 }

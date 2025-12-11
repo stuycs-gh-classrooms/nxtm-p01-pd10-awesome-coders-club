@@ -12,8 +12,8 @@ class Ball
     position = new PVector();
     position.x = mouseX;
     position.y = 420;
-    xspeed = 2;
-    yspeed = -2;
+    xspeed = 5;
+    yspeed = -5;
     bsize = 24;
   }
   
