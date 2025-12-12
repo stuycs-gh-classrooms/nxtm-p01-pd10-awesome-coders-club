@@ -69,7 +69,7 @@ class Ball
       }
     }
     if(position.y+bsize/2>435 &&
-    position.y+bsize/2<445 &&
+    position.y+bsize/2<455 &&
     position.x+bsize>mouseX-30 &&
     position.x-bsize<mouseX+30) {
       yspeed*=-1;

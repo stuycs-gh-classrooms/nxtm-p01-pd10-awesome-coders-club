@@ -68,12 +68,28 @@ void keyPressed() {
     chaos=!chaos;
   }
   if(key=='q') {
-    balls[0].xspeed*=2;
-    balls[0].yspeed*=2;
+    for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+  balls[i].xspeed*=2;
+    }
+  }
+      for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+  balls[i].yspeed*=2;
+    }
+  }
   }
   if(key=='e') {
-    balls[0].xspeed*=0.5;
-    balls[0].yspeed*=0.5;
+    for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+  balls[i].xspeed*=0.5;
+    }
+  }
+      for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+  balls[i].yspeed*=0.5;
+    }
+  }
   }
   if(key=='g') {
     for(int i = 0;i<grid.numCols;i++) {
@@ -117,14 +133,26 @@ void keyPressed() {
 }
 
 void reset() {
-  for(int i = 0;i<numBalls;i++) {
-  balls[i] = new Ball();
+  balls[0] = new Ball();
+        for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+      if(i>0) {
+  balls[i] = null;
+      }
+    }
   }
 }
 
 void trueReset() {
   playing = true;
   balls[0] = new Ball();
+        for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+      if(i>0) {
+  balls[i] = null;
+      }
+    }
+  }
   grid = new Grid();
   lives = 3;
   chaos = false;
