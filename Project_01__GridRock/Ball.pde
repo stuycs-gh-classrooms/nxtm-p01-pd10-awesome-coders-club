@@ -12,8 +12,8 @@ class Ball
     position = new PVector();
     position.x = mouseX;
     position.y = 420;
-    xspeed = 5;
-    yspeed = -5;
+    xspeed = 0+2*timesWon;
+    yspeed = -2-2*timesWon;
     bsize = 24;
   }
   
@@ -69,10 +69,20 @@ class Ball
       }
     }
     if(position.y+bsize/2>435 &&
-    position.y+bsize/2<455 &&
+    position.y+bsize/2<435+abs(yspeed)*2 &&
     position.x+bsize>mouseX-30 &&
     position.x-bsize<mouseX+30) {
       yspeed*=-1;
+      if(xspeed>0) {
+        if(position.x<mouseX) {
+          xspeed*=-1;
+        }
+      }
+      if(xspeed<0) {
+        if(position.x>mouseX) {
+          xspeed*=-1;
+        }
+      }
       if(chaos) {
       yspeed+=int(random(-5,5));
       xspeed+=int(random(-5,5));

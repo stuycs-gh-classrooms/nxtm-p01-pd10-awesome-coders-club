@@ -5,8 +5,12 @@ boolean playing;
 int lives;
 boolean chaos;
 int numBalls;
+boolean won;
+int timesWon;
 
 void setup() {
+  timesWon = 1;
+  won = false;
   lives = 3;
   chaos=false;
   playing = true;
@@ -46,6 +50,8 @@ void draw() {
     textSize(50);
     text("YOU WIN!",155,200);
     textSize(20);
+    text("click to continue",175,250);
+    won = true;
   }
 }
 
@@ -54,6 +60,21 @@ void mouseClicked() {
     if(!(balls[i]==null)) {
   balls[i].onPaddle = false;
     }
+  }
+  if(won) {
+      timesWon++;
+    balls[0] = new Ball();
+        for(int i = 0;i<balls.length;i++) {
+    if(!(balls[i]==null)) {
+      if(i>0) {
+  balls[i] = null;
+      }
+    }
+  }
+  won = false;
+  playing = true;
+  grid = new Grid();
+
   }
 }
 
@@ -145,6 +166,7 @@ void reset() {
 
 void trueReset() {
   playing = true;
+  won = false;
   balls[0] = new Ball();
         for(int i = 0;i<balls.length;i++) {
     if(!(balls[i]==null)) {
