@@ -39,6 +39,7 @@ void draw() {
   balls[i].move();
     }
   }
+  fill(255);
   text("lives: "+lives,10,height-10);
   }
   if(lives==0) {
@@ -178,6 +179,4 @@ void trueReset() {
   grid = new Grid();
   lives = 3;
   chaos = false;
-  balls[0].xspeed = 5;
-  balls[0].yspeed = -5;
 }

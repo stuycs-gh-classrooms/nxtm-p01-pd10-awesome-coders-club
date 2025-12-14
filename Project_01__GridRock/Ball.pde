@@ -22,8 +22,19 @@ class Ball
   }
   
   void display() {
-    fill(255);
-    circle(position.x,position.y,bsize/2);
+    stroke(255);
+  //  fill(255);
+   // circle(position.x,position.y,bsize/2);
+    fill(0);
+    rect(position.x,position.y-15,20,35,40,40,5,20);
+    fill(255,255,0); 
+    rect(position.x,position.y, 20, 40);
+    fill(255,30,30);
+    rect(position.x,position.y+5,20,20);
+    fill(255,255,0);
+    textSize(10);
+    text("RAID", position.x, position.y+15);
+    
   }
   
   void move() {
