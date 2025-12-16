@@ -1,6 +1,7 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Mfyqb_T6)
 # NeXtCS Project 01
-### thinker0: FRIST LSAT
-### thinker1: FRIST LSAT
+### thinker0: Andrzej Olszak
+### thinker1: Rice Yuan
 ---
 
 ### Overview
@@ -21,50 +22,113 @@ The first phase will be to work on this document.
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: Breakout/Arkanoid
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+> ball
+    - bounces off edges except bottom edge
+    - interacts with blocks(breaks them)
+    - interacts with paddle (bounces off)
+
+> paddle
+    - moves with mouse
+    - interacts with ball
+
+> blocks
+    - interacts with ball(disappears)
+    - !! arrays(of blocks)
+
+> lives
+    - three
+    - lives lost for ball touching bottom edge
+    - 0 = lose
+
+> game settings
+    - pause
+    - unpause
+    - reset
+    - win condition: all blocks gone
+
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+> ball
+    - vectors(different directions)
+    - ball skins
 
+> paddle
+    - paddle skins
+
+> blocks
+    - block skins
+    - moving blocks
+
+> game settings
+    - difficulty changes
+    - score(count)
+
+> background
+    - background skins
+
+> powerups
+    - multi-balls
+    - bigger balls
 ### Array Usage
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+- balls
 
 2D Array:
-- YOUR ANSWER HERE
+- blocks!! (grid)
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- p to pause/unpause
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: x position of the mouse controls the paddle
+- Mouse pressed: starts the game and launches the ball when you lose a life
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+CLASS Ball
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - PVector position
+  - int xspeed
+  - int yspeed
 - METHODS
-  - LIST METHODS HERE
+  - Ball(int x)
+  - Ball()
+  - display()
+  - move()
 
-CLASS NAME1
+CLASS Paddle
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int x
 - METHODS
-  - LIST METHODS HERE
+  - Paddle()
+  - display()
+  
+  CLASS Grid
+- Instance variables:
+  - Block[][]
+- METHODS
+  - Grid()
+ 
+  CLASS Block
+- Instance variables:
+  - PVector position
+  - boolean on
+- METHODS
+  - Block(int x,int y)
+  - Block()
+  - display()
