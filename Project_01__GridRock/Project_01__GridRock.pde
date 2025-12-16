@@ -166,6 +166,7 @@ void reset() {
 }
 
 void trueReset() {
+  timesWon=1;
   playing = true;
   won = false;
   balls[0] = new Ball();
